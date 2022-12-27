@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+// import About from "./pages/Abouts";
+import { Link, Routes, Route } from 'react-router-dom';
+import Abouts from "./pages/Abouts";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav className="flex justify-around items-center gap-4 text-white bg-[#000eee99]">
+        <ul className="flex gap-4 items-center justify-between p-2">
+          <li>
+            <Link to="/" >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/Contact" >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/Abouts" >
+              Abouts
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+    {/* <BrowserRouter> */}
+      <Routes>
+        {/* <Route path="/" element={<Layout />}> */}
+          <Route index element={<Home />} />
+          <Route path="Abouts" element={<Abouts />} />
+          <Route path="contact" element={<Contact />} />
+          {/* <Route path="*" element={<NoPage />} /> */}
+        {/* </Route> */}
+      </Routes>
+    {/* </BrowserRouter> */}
+
+    </>
   );
 }
 
