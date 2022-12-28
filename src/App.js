@@ -44,7 +44,7 @@ function App() {
                     </Link>
             </li>
             <li className="px-4">
-                <Link to={"/about"} className="flex items-center gap-3 whitespace-nowrap">
+                <Link to={"/abouts"} className="flex items-center gap-3 whitespace-nowrap">
                     <AiOutlineUser className="w-[25px] h-[25px]" />
                     <span className="hidden md:block">About Me</span>
                 </Link>
