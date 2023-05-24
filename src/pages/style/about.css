@@ -1,6 +1,8 @@
 .card {
     transition: 0.3s;
     position: relative;
+    background: #4c6c8911;
+    color: #4c6c89;
 }
 
 .card::before {
@@ -16,15 +18,42 @@
 }
 
 .card:hover::before {
-    border: 1px solid #888;
+    border: 1px solid #233b5133;
 }
 
 .card:hover {
     transform: translateY(-8px);
 }
 
+
+.skills {
+    position: relative;
+}
+
+.skills::before,
+.skills::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.skills::before {
+    background-color: #253e55c4;
+    z-index: -1;
+}
+
+.skills::after {
+    background-image: url(https://cdn.pixabay.com/photo/2018/03/17/10/49/bulletin-board-3233641_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+    background-attachment: fixed;
+    background-position: center 100px;
+}
+
 .skill svg {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), #CFD8DC);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 15px 0 rgba(14, 10, 10, 0.1);
@@ -40,15 +69,15 @@
 }
 
 .skill.htl div span {
-    background: linear-gradient(to right, rgb(244, 137, 61) 70%, #eee);
+    background: rgb(244, 137, 61);
 }
 
 .skill.css {
-    color: rgb(31, 135, 255);
+    color: #1f87ff;
 }
 
 .skill.css div span {
-    background: linear-gradient(to right, rgb(31, 135, 255) 70%, #eee);
+    background: rgb(31, 135, 255);
 }
 
 .skill.js {
@@ -56,7 +85,7 @@
 }
 
 .skill.js div span {
-    background: linear-gradient(to right, rgb(201, 218, 74) 70%, #eee);
+    background: rgb(201, 218, 74);
 }
 
 .skill.boot {
@@ -64,7 +93,7 @@
 }
 
 .skill.boot div span {
-    background: linear-gradient(to right, rgb(255, 87, 31) 70%, #eee);
+    background: rgb(255, 87, 31);
 }
 
 .skill.react {
@@ -72,7 +101,7 @@
 }
 
 .skill.react div span {
-    background: linear-gradient(to right, rgb(0, 132, 255) 70%, #eee);
+    background: rgb(0, 132, 255);
 }
 
 .skill.sas {
@@ -80,5 +109,5 @@
 }
 
 .skill.sas div span {
-    background: linear-gradient(to right, rgb(255, 0, 47) 70%, #eee);
+    background: rgb(255, 0, 47);
 }

@@ -1,8 +1,85 @@
 .glass-effect {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), #ECEFF1);
     -webkit-backdrop-filter: blur(20px);
+    -moz-background-filter: blur(20px);
+    -moz-background-filter: blur(20px);
     backdrop-filter: blur(20px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 10px;
+}
+
+/* .home-container {
+    width: calc(100% - 95px);
+    right: 0%;
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    .home-container {
+        width: calc(100% - 170px);
+    }
+} */
+
+* {
+    font-family: 'Signika', sans-serif;
+}
+
+
+.btn-submit {
+    box-shadow: 1px -1px 2px #456777 inset;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    height: 46px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    color: #456777;
+}
+
+.btn-submit::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    z-index: -1;
+    border-radius: 100%;
+    background-color: #4DB6AC;
+}
+
+
+.btn-submit:hover::before {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+a[download] {
+    box-shadow: 0px 1px 2px #456777 inset;
+    color: #456777;
+    overflow: hidden;
+}
+
+
+a[download]:hover {
+    color: #fff;
+}
+
+a[download] svg {
+    background-color: #4DB6AC;
+    color: #fff;
+    transition: 0.3s;
+}
+
+a[download]:hover svg {
+    box-shadow: 0px 0px 1px 500px #4DB6AC;
+    background-color: #fff;
+    color: #456777;
 }
