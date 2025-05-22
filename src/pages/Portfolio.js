@@ -1,48 +1,66 @@
-import { useEffect } from "react";
-import "./style/portfolio.css"
-
-import {AiFillGithub} from "react-icons/ai"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { AiFillGithub } from "react-icons/ai";
 
 const Portfolio = () => {
-    const [repos, setRepos] = useState([]);
-    useEffect(() => {
-      fetch("https://api.github.com/users/mounaimMoussaoui/repos")
-      .then((res) => {
-          return res.json();
-      })
-      .then(data => setRepos(data));
-    }, [])
+  const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    return (
-      <div className="flex flex-col gap-[30px] p-4 w-full text-center overflow-hidden">
-        <h1 className="text-[40px] font-bold my-[30px] head-section" data-text="Portfolio">Portfolio</h1>
-        <iframe name="iframe" src="https://mounaimmoussaoui.github.io/RockPaperScissorsGame/" className="w-full min-h-[80vh] shadow-lg rounded-lg frame" title="This frame come a small tab to show all works"></iframe>
-          <h1 className="my-4 text-[40px] font-[700] text-head mx-auto">All Works</h1>
-        <div className="container w-full">
-          {
-            repos.filter(repo => !repo.fork).map((repo) => {
-              console.log(repo);
-              return (
-                <div key={repo.id} className="proj shadow h-[200px] rounded-lg relative flex items-center overflow-hidden justify-center">
-                <a href={`https://mounaimmoussaoui.github.io/${repo.name}/index.html`} title="Path the Live Demo" target={"iframe"}>
-                    <img src="project8.png" alt="prj-img" className="w-full h-full bg-[#ccc]" onClick={() => window.scroll({top: 0, behavior: "smooth"})}/>
+  useEffect(() => {
+    fetch("https://api.github.com/users/mounaimMoussaoui/repos")
+      .then((res) => res.json())
+      .then((data) => {
+        setRepos(data.filter(repo => !repo.fork));
+        setLoading(false);
+      });
+  }, []);
+
+  return (
+    <div className="min-h-screen px-4 py-10 bg-gray-50">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">My Portfolio</h1>
+
+      {loading ? (
+        <p className="text-center text-gray-500">جاري تحميل المشاريع...</p>
+      ) : (
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {repos.map((repo) => (
+            <div key={repo.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+              <img
+                src={`https://opengraph.githubassets.com/1/${repo.full_name}`}
+                alt={repo.name}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-2">{repo.name}</h2>
+                <p className="text-sm text-gray-600 mb-4">
+                  {repo.description || "لا يوجد وصف لهذا المشروع."}
+                </p>
+                <div className="flex justify-between items-center">
+                  <a
+                    href={`https://mounaimmoussaoui.github.io/${repo.name}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-blue-600 hover:underline"
+                  >
+                    عرض المشروع
                   </a>
-                  <a href={repo.html_url} title="Path The Repository" className="btn-git absolute w-[40px] h-[40px] flex items-center justify-center bg-[#fff] hover:bg-[#ffffff99] right-2 top-2 rounded-[50%] transition-[0.3s]">
-                      <AiFillGithub className="w-[25px] h-[25px]"/>
-                      <span className="txtTol absolute right-[110%] w-[max-content] px-2 text-sm text-[#555] rounded-sm bg-[#ffffff99]">see the code in the github</span>
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-black"
+                    title="رابط كود المشروع"
+                  >
+                    <AiFillGithub size={24} />
                   </a>
-                  <div className="content-proj transition-[0.5s] absolute bottom-[-20%] opacity-0 bg-[#4c6c89] w-full p-4 text-start text-black-50">
-                    <span className="text-[20px] font-bold text-white">{repo.name}</span>
-                    <p className="text-sm text-[#B2DFDB] font-[600]">{repo.description}</p>
-                  </div>
                 </div>
-              )
-            })
-          }
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    );
-  };
-  
-  export default Portfolio;
+      )}
+    </div>
+  );
+};
+
+export default Portfolio;
+
