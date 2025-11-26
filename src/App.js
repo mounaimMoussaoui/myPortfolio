@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import { Link, Routes, Route } from 'react-router-dom';
-import Abouts from "./pages/Abouts";
+import About from "./pages/About";
 import {AiOutlineHome, AiOutlineSetting, AiOutlineContacts, AiOutlineFundProjectionScreen, AiOutlineUser} from "react-icons/ai";
 import "./pages/style/navBar.css";
 
@@ -36,7 +36,7 @@ function App() {
                     </Link>
             </li>
             <li className="md:px-4" onClick={handleActive}>
-                <Link to={"/abouts"} className="flex items-center md:gap-3 whitespace-nowrap">
+                <Link to={"/about"} className="flex items-center md:gap-3 whitespace-nowrap">
                     <AiOutlineUser className="w-[25px] h-[25px]" />
                     <span className="hidden md:block">About Me</span>
                 </Link>
@@ -85,7 +85,7 @@ function App() {
 
       <Routes>
           <Route index element={<Home />} />
-          <Route path="Abouts" element={<Abouts />} />
+          <Route path="About" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="Portfolio" element={<Portfolio />} />
       </Routes>

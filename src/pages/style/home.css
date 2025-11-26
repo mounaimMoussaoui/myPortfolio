@@ -83,3 +83,36 @@ a[download]:hover svg {
     background-color: #fff;
     color: #456777;
 }
+
+.upper-container {
+    position: relative;
+    z-index: 1;
+}
+
+.upper-container::after {
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-image: conic-gradient(#456777 20%, #162127 40%, #4DB6AC 60%, #456777 80%, #162127 100%);
+    transform-origin: center;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+} 
+
+.upper-container:hover::after {
+    animation: rotateBg infinite 4s alternate-reverse ease-in-out;
+}
+
+@keyframes rotateBg {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) ;
+
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
