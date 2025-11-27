@@ -36,7 +36,7 @@ const About = () => {
                 </div>
                 <div className="skills flex flex-col px-[35px] py-[35px] bg-[#4c6c8921] gap-4">
                     <span className="title font-bold text-[40px] text-[#fff] my-5">MY SKILLS</span>
-                    <div className="flex w-full flex-wrap gap-y-[25px] flex-wrap">
+                    <div className="flex w-full flex-wrap gap-y-[25px]">
                         <div className="skill htl md:w-[50%] flex items-center gap-4 w-full px-[20px]">
                             <AiFillHtml5 className="text-[40px]"/>
                             <div className="flex-grow md:w-[50%] h-[15px] bg-[#ffffff99] relative">
