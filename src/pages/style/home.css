@@ -101,6 +101,7 @@ a[download]:hover svg {
     position: absolute;
     z-index: -1;
     overflow: hidden;
+    transform: translate(-50%, -50%);
 } 
 
 .upper-container:hover::after {
@@ -110,7 +111,6 @@ a[download]:hover svg {
 @keyframes rotateBg {
     from {
         transform: translate(-50%, -50%) rotate(0deg) ;
-
     }
     to {
         transform: translate(-50%, -50%) rotate(360deg);
