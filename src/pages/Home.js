@@ -1,9 +1,10 @@
 import {AiOutlineDownload} from "react-icons/ai";
+import { motion } from "framer-motion";
 import "./style/home.css";
 
 const Home = () => {
     return (
-      <div className="w-full min-h-[100vh]">
+      <motion.div initial={{ opacity: 0, marginTop: '-100px' }} animate={{ opacity: 1, marginTop: '0px', transition: { duration: 1, delay: 0.5, type: 'spring' } }} exit={{ opacity: 0 }} className="w-full min-h-[100vh]">
         <div className=" w-full h-full p-[25px] flex items-center">
           <div className="flex items-center md:items-stretch justify-center flex-col md:flex-row gap-4 p-4 ">
             <div className="upper-container w-[60%] md:w-[30%] bg-[#fff] rounded-[50%] md:rounded-[10px] relative overflow-hidden cursor-pointer">
@@ -18,7 +19,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   };
   

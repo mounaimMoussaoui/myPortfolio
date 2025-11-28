@@ -1,8 +1,28 @@
 import {AiOutlineDownload, AiFillHtml5} from "react-icons/ai"
 import {FaCss3Alt, FaBootstrap, FaReact, FaSass} from "react-icons/fa"
 import {SiJavascript} from "react-icons/si"
+import { motion } from "framer-motion"
 // import {tp} from "react-icons/si"
 import "./style/about.css"
+
+
+const containerItemsVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: 'spring',
+            delayChildren: 0.5,
+            staggerChildren: 0.3
+        }
+    }
+}
+
+const itemsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+}
 
 const About = () => {
     return (
@@ -15,24 +35,24 @@ const About = () => {
                         <p className="md:text-start text-[#777] leading-8">I'm a 23-year-old Moroccan youth,  holder of a diploma in development Informatique on 2021 and this year I completed my studies on web development with self-study and at the same time practiced these skills with the creation of Templates that found in multi-platform like FrontEnd Mentor and I works on my logical thinking with problem solving on leetcode and hackerrank.</p>
                         <a href="Moussaoui Abdennaim cv_2.pdf" download className="pl-2 pr-4 py-2 rounded-[30px] flex items-center gap-4 transition-[0.3s] hover:bg-[#eee]"><AiOutlineDownload className="w-[30px] h-[30px] bg-[#eee] rounded-[50%] p-2" /> Download</a>
                     </div>
-                    <div className="flex flex-wrap gap-[30px] my-4">
-                        <div className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
+                    <motion.div variants={containerItemsVariants} initial="hidden" animate="visible" className="flex flex-wrap gap-[30px] my-4 cursor-pointer">
+                        <motion.div variants={itemsVariants} className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
                             <span className="font-bold text-[35px] text-[#26a69a]">10+</span>
                             <span className="pl-4 text-start">PROJECTS<br />COMPLETED</span>
-                        </div>
-                        <div className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
+                        </motion.div>
+                        <motion.div variants={itemsVariants} className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
                             <span className="font-bold text-[35px] text-[#26a69a]">0+</span>
                             <span className="pl-[25px] text-start">YEARS OF<br />EXPERIENCE</span>
-                        </div>
-                        <div className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
+                        </motion.div>
+                        <motion.div variants={itemsVariants} className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
                             <span className="font-bold text-[35px] text-[#26a69a]">0+</span>
                             <span className="pl-[25px] text-start">HAPPY<br />CLIENTS</span>
-                        </div>
-                        <div className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
+                        </motion.div>
+                        <motion.div variants={itemsVariants} className="card flex flex-col items-start gap-4 shadow-lg w-[100%] md:w-[45%] rounded-[5px] p-4">
                             <span className="font-bold text-[35px] text-[#26a69a]">0+</span>
                             <span className="pl-[25px] text-start">CUSTOMER<br />REVIEWS</span>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
                 <div className="skills flex flex-col px-[35px] py-[35px] bg-[#4c6c8921] gap-4">
                     <span className="title font-bold text-[40px] text-[#fff] my-5">MY SKILLS</span>
