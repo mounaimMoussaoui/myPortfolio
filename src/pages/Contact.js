@@ -3,7 +3,6 @@ import {AiOutlineMail, AiFillGithub, AiFillLinkedin, AiOutlineTwitter, AiOutline
 import {BsPhone} from "react-icons/bs";
 import {FaLanguage, FaFacebookF} from "react-icons/fa";
 import {motion} from "framer-motion";
-import { type } from "@testing-library/user-event/dist/type";
 
 const containerVariantsSocialMedia = {
   hidden: { opacity: 0, x: -100 },
