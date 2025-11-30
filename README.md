@@ -47,5 +47,3 @@ npm install
 
 # Start the development server
 npm run dev
-
-# ***** "https://mounaimMoussaoui.github.io/myPortfolio"*
