@@ -9,7 +9,7 @@ const Home = () => {
           <div className="flex items-center md:items-stretch justify-center flex-col md:flex-row gap-4 p-4 ">
             <div className="upper-container w-[60%] md:w-[30%] bg-[#fff] rounded-[50%] md:rounded-[10px] relative overflow-hidden cursor-pointer">
               <div className="glass-effect w-[98%] h-[98%] bg-[#fff] border-2 rounded-[50%] md:rounded-[10px] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
-                <img src="/images/mounaim.png" alt="img-user" className="grayscale bg-[#fff] w-[100%] h-[100%] rounded-[50%] md:rounded-[10px] transition-[0.3s] hover:grayscale-0"/>
+                <img src="/images/mounaim.png" loading="lazy" alt="img-user" className="grayscale bg-[#fff] w-[100%] h-[100%] rounded-[50%] md:rounded-[10px] transition-[0.3s] hover:grayscale-0"/>
               </div>
            </div>
             <div className="glass-effect content flex gap-4 flex-col items-center md:items-start text-center p-4">
