@@ -1,6 +1,6 @@
 {
   "name": "router-app",
-  "homepage": "https://mounaimMoussaoui.github.io/myPortfolio",
+  "homepage": "index.html",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
