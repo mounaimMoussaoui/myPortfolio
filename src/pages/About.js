@@ -32,7 +32,7 @@ const About = () => {
                 <div className="flex flex-col md:flex-row gap-[35px] px-[30px]">
                     <div className="flex flex-col items-center md:items-start gap-[30px] md:w-[50%] ">
                         <h2 className="text-lg font-bold text-[30px] text-[#213b53]">INFORMATION ABOUT ME</h2>
-                        <p className="md:text-start text-[#777] leading-8">I'm a 23-year-old Moroccan youth,  holder of a diploma in development Informatique on 2021 and this year I completed my studies on web development with self-study and at the same time practiced these skills with the creation of Templates that found in multi-platform like FrontEnd Mentor and I works on my logical thinking with problem solving on leetcode and hackerrank.</p>
+                        <p className="md:text-start text-[#777] leading-8">I'm a 23-year-old Moroccan youth,  holder of a diploma in development Informatique on 2021 and this year I completed my studies on web development with self-study and at the same time practiced these skills with the creation of Templates that found in multi-platform like FrontEnd Mentor and I works on my logical thinking with problem solving on leetCode and hackerRank.</p>
                         <a href="Moussaoui Abdennaim cv_2.pdf" download className="pl-2 pr-4 py-2 rounded-[30px] flex items-center gap-4 transition-[0.3s] hover:bg-[#eee]"><AiOutlineDownload className="w-[30px] h-[30px] bg-[#eee] rounded-[50%] p-2" /> Download</a>
                     </div>
                     <motion.div variants={containerItemsVariants} initial="hidden" animate="visible" className="flex flex-wrap gap-[30px] my-4 cursor-pointer">

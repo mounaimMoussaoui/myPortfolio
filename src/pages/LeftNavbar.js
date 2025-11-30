@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import { motion } from "motion/react";
 import {AiOutlineHome, AiOutlineSetting, AiOutlineContacts, AiOutlineFundProjectionScreen, AiOutlineUser} from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { type } from "@testing-library/user-event/dist/type";
 
 export const LeftNavbar = React.memo(() => {
 

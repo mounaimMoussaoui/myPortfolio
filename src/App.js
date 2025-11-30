@@ -7,13 +7,9 @@ import "./pages/style/navBar.css";
 import { LeftNavbar } from "./pages/LeftNavbar";
 
 function App() {
-
- 
-
   return (
     <>
       <LeftNavbar />
-
       <Routes>
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
