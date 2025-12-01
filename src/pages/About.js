@@ -1,8 +1,8 @@
 import {AiOutlineDownload, AiFillHtml5} from "react-icons/ai"
-import {FaCss3Alt, FaBootstrap, FaReact, FaSass} from "react-icons/fa"
+import {FaCss3Alt, FaReact, FaSass} from "react-icons/fa"
+import { RiTailwindCssFill } from "react-icons/ri";
 import {SiJavascript} from "react-icons/si"
 import { motion } from "framer-motion"
-// import {tp} from "react-icons/si"
 import "./style/about.css"
 
 
@@ -75,8 +75,8 @@ const About = () => {
                                 <span data-vol="75%" className="w-[75%] h-[100%] absolute left-0 text-[#fff] text-[12px] flex items-center justify-center">75%</span>
                             </div>
                         </div>
-                        <div className="skill boot md:w-[50%] flex items-center gap-4 w-full px-[20px]">
-                            <FaBootstrap className="text-[40px]"/>
+                        <div className="skill tailwind md:w-[50%] flex items-center gap-4 w-full px-[20px]">
+                            <RiTailwindCssFill className="text-[40px]"/>
                             <div className="flex-grow md:w-[50%] h-[15px] bg-[#ffffff99] relative">
                                 <span data-vol="60%" className="w-[60%] h-[100%] absolute left-0 text-[#fff] text-[12px] flex items-center justify-center">60%</span>
                             </div>

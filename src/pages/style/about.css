@@ -88,12 +88,12 @@
     background: rgb(201, 218, 74);
 }
 
-.skill.boot {
-    color: rgb(255, 87, 31);
+.skill.tailwind {
+    color: #00bcff;
 }
 
-.skill.boot div span {
-    background: rgb(255, 87, 31);
+.skill.tailwind div span {
+    background: #00bcff;
 }
 
 .skill.react {

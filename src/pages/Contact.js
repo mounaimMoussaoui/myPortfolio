@@ -53,22 +53,22 @@ const Contact = () => {
                             initial="hidden" animate="visible"
                             className="social-media flex gap-4 mt-4">
                   <motion.li variants={itemVariantsSocialMedia} whileHover={{scale: 1.2}} whileTap={{scale: 0.9}} className="w-[40px] h-[40px] text-[#1877f2] bg-[#eceff16b] rounded-[50%] facebook flex items-center justify-center">
-                    <a href="https://www.facebook.com/mounaim.skwadra.5" title="My profile Facebook">
+                    <a href="https://www.facebook.com/mounaim.skwadra.5" title="My profile Facebook" target="_blank" rel="noopener noreferrer">
                       <FaFacebookF />
                     </a>
                   </motion.li>
                   <motion.li variants={itemVariantsSocialMedia} whileHover={{scale: 1.2}} whileTap={{scale: 0.9}} className="w-[40px] h-[40px] text-[#333] bg-[#eceff16b] github rounded-[50%] flex items-center justify-center">
-                    <a href="https://github.com/mounaimMoussaoui" title="My profile Github">
+                    <a href="https://github.com/mounaimMoussaoui" title="My profile Github" target="_blank" rel="noopener noreferrer">
                       <AiFillGithub />
                     </a>
                   </motion.li>
                   <motion.li variants={itemVariantsSocialMedia} whileHover={{scale: 1.2}} whileTap={{scale: 0.9}} className="w-[40px] h-[40px] text-[#0a66c2] bg-[#eceff16b] linkedin rounded-[50%] flex items-center justify-center">
-                    <a href="https://www.linkedin.com/in/moussaoui-abdennaim-9078ab196" title="My profile Linkedin">
+                    <a href="https://www.linkedin.com/in/moussaoui-abdennaim-9078ab196" title="My profile Linkedin" target="_blank" rel="noopener noreferrer">
                       <AiFillLinkedin />
                     </a>
                   </motion.li>
                   <motion.li variants={itemVariantsSocialMedia} whileHover={{scale: 1.2}} whileTap={{scale: 0.9}} className="w-[40px] h-[40px] text-[#1da1f2] bg-[#eceff16b] rounded-[50%] twitter flex items-center justify-center">
-                    <a href="https://twitter.com/AbdennaimM" title="My profile twitter">
+                    <a href="https://twitter.com/AbdennaimM" title="My profile twitter" target="_blank" rel="noopener noreferrer">
                       <AiOutlineTwitter />
                     </a>
                   </motion.li>
