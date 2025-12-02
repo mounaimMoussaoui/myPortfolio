@@ -28,7 +28,7 @@ const About = () => {
     return (
         <div className="text-center w-full">
             <h1 className="text-[35px] font-bold my-[50px] head-section" data-text="AboutMe">ABOUT<span>ME</span></h1>
-            <div className="flex flex-col gap-[30px]">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1, delay: 0.5, type: 'spring' } }} exit={{ opacity: 0 }}  className="flex flex-col gap-[30px]">
                 <div className="flex flex-col md:flex-row gap-[35px] px-[30px]">
                     <div className="flex flex-col items-center md:items-start gap-[30px] md:w-[50%] ">
                         <h2 className="text-lg font-bold text-[30px] text-[#213b53]">INFORMATION ABOUT ME</h2>
@@ -95,7 +95,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
     };

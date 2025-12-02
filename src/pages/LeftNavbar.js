@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const LeftNavbar = React.memo(() => {
 
-     const showSetting = useCallback((e) => {
+    const showSetting = useCallback((e) => {
         if(e.currentTarget.getAttribute("id")=== "btnStyle") {
           e.currentTarget.classList.toggle("clicked");
           let list = document.getElementById("sitting");
@@ -23,7 +23,7 @@ export const LeftNavbar = React.memo(() => {
       }, []);
 
     return (
-       <motion.nav initial={{ left: '-100%', opacity: 0 }} animate={{ left: '0px', opacity: 1, transition: {type: 'spring', duration: 1, delay: 0.5} }} exit={{ left: '-100%' }} className="shadow min-h-[100vh] p-2 bg-[#253f56] w-[60px] md:w-[170px] relative navBar">
+        <motion.nav initial={{ left: '-100%', opacity: 0 }} animate={{ left: '0px', opacity: 1, transition: {type: 'spring', duration: 1, delay: 0.5} }} exit={{ left: '-100%' }} className="shadow min-h-[100vh] p-2 bg-[#253f56] w-[60px] md:w-[170px] relative navBar">
           <ul className="nav-bar flex flex-col gap-4 relative text-[#fff]">
             <motion.li  whileHover={{ scale: 1.1}}
                         animate={{scale: 1, transition: {type: 'spring'}}}
@@ -34,7 +34,7 @@ export const LeftNavbar = React.memo(() => {
                       <AiOutlineHome className="w-[25px] h-[25px]" />
                       <span className="hidden md:block">Home</span>
                     </Link>
-            </motion.li>
+        </motion.li>
             <motion.li  whileHover={{ scale: 1.1}}
                         animate={{scale: 1, transition: {type: 'spring'}}}
                         whileTap={{scale: 0.9}}

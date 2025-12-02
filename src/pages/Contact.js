@@ -96,8 +96,8 @@ const Contact = () => {
               <textarea placeholder="Message Here" name="txtMsg" id="txtMsg" cols={"5"} rows={"5"} className="border py-2 mt-1 px-3 rounded-[5px] resize-none focus:outline-none focus:border-[#213b53]" ></textarea>
             </motion.label>
             <motion.div variants={itemVariantsSocialMedia} className="flex gap-x-4 flex-col gap-2 sm:flex-row ">
-                <a href="Moussaoui Abdennaim cv_2.pdf" download className="pl-2 pr-4 py-2 rounded-[30px] flex items-center gap-4 transition-[0.3s]"><AiOutlineDownload className="w-[30px] h-[30px] bg-[#eee] rounded-[50%] p-2" /> Download</a>
-                <span className="rounded-[30px] flex transition-[0.3s] px-[25px] py-2 btn-submit">Submit</span>
+                <motion.a href="Moussaoui Abdennaim cv_2.pdf" download whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="pl-2 pr-4 py-2 rounded-[30px] flex items-center gap-4 transition-[0.3s]"><AiOutlineDownload className="w-[30px] h-[30px] bg-[#eee] rounded-[50%] p-2"/> Download</motion.a>
+                <motion.span  whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="rounded-[30px] flex transition-[0.3s] px-[25px] py-2 btn-submit">Submit</motion.span>
             </motion.div>
           </motion.form>
         </div>
