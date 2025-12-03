@@ -21,7 +21,6 @@ const Portfolio = () => {
         <div className="container w-full">
           {
             repos.filter(repo => !repo.fork).map((repo) => {
-              // console.log(repo);
               return (
                 <div key={repo.id} className="proj shadow h-[200px] rounded-lg relative flex items-center overflow-hidden justify-center">
                 <a href={`https://mounaimmoussaoui.github.io/${repo.name}/index.html`} title="Path the Live Demo" target={"iframe"}>
