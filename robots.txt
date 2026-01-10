@@ -1,0 +1,9 @@
+user-agent: *
+disallow: /dwonloads/
+
+user-agent: magicsearchbot
+disallow: /uploads/
+
+#start of file
+user-agent: *
+disallow: /downloads/
